@@ -57,7 +57,7 @@ const checkAndGenerate = async function (
   //   userId: userIdValue,
   // });
 
-  const { userId, title } = postedResponse;
+  // const { userId, title } = postedResponse;
 
   // generate output
   const resultText = generateResult(userId, title);
