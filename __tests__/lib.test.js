@@ -1,3 +1,4 @@
+jest.mock("../js/postToServer.js");
 const {
   generateResult,
   validateInput,
