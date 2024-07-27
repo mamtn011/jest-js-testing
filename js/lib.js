@@ -1,4 +1,4 @@
-// const postToServer = require("./postToServer.js");
+const postToServer = require("./postToServer.js");
 
 // get user input fields
 const getUserInputs = function () {
@@ -51,13 +51,13 @@ const checkAndGenerate = async function (
   }
 
   // post to server
-  // const postedResponse = await postToServer({
-  //   title: titleValue,
-  //   body: articleValue,
-  //   userId: userIdValue,
-  // });
+  const postedResponse = await postToServer({
+    title: titleValue,
+    body: articleValue,
+    userId: userIdValue,
+  });
 
-  // const { userId, title } = postedResponse;
+  const { userId, title } = postedResponse;
 
   // generate output
   const resultText = generateResult(userId, title);

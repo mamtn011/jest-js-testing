@@ -30,7 +30,17 @@ test("testing generate result", () => {
 
 //   return true;
 // };
-
 test("testing validate input", () => {
   expect(validateInput(1344, true, true)).toBeTruthy();
+});
+
+//? integration test for checkAndGenerate function
+// test("testing checkAndGenerate function", () => {
+//   expect(checkAndGenerate(144, "my title", "my article")).toBe(
+//     "User ID: 144 created an article titled my title"
+//   );
+// });
+test("testing checkAndGenerate function", async () => {
+  const result = await checkAndGenerate(144, "my title", "my article");
+  expect(result).toBe("User ID: 144 created an article titled my title");
 });
